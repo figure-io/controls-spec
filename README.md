@@ -1,7 +1,9 @@
 Controls Specification
 ===
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependencies][dependencies-image]][dependencies-url]
-
+[![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Coverage Status][codecov-image]][codecov-url]
+[![Dependencies][dependencies-image]][dependencies-url]
 > JSON specification and validator for [control interfaces](https://github.com/figure-io/polymer-controls).
 
 
@@ -138,6 +140,9 @@ Copyright &copy; 2015. The [Compute.io](https://github.com/compute-io) Authors.
 
 [dev-dependencies-image]: http://img.shields.io/david/dev/figure-io/controls-spec.svg
 [dev-dependencies-url]: https://david-dm.org/dev/figure-io/controls-spec
+
+[codecov-image]: https://img.shields.io/codecov/c/github/figure-io/controls-spec/master.svg
+[codecov-url]: https://codecov.io/github/figure-io/controls-spec?branch=master
 
 [github-issues-image]: http://img.shields.io/github/issues/figure-io/controls-spec.svg
 [github-issues-url]: https://github.com/figure-io/controls-spec/issues

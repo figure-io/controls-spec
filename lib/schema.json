@@ -21,9 +21,9 @@
                 },
                 "value": {
                     "type":"number"
-                },
-                "required":["min","max"]
-            }
+                }
+            },
+            "required":["min","max"]
         },
         "checkbox":{
             "title": "Checkbox",
@@ -52,9 +52,9 @@
                 },
                 "value": {
                     "type":["string"]
-                },
-                "required":["choices"]
-            }
+                }
+            },
+            "required":["choices"]
         },
         "input":{
             "title": "Input Field",
