@@ -1,0 +1,59 @@
+{
+  "name": "controls-spec",
+  "version": "0.0.0",
+  "description": "JSON specification and validation for control interfaces.",
+  "author": {
+    "name": "Philipp Burckhardt",
+    "email": "pburckhardt@outlook.com"
+  },
+  "contributors": [
+    {
+      "name": "Philipp Burckhardt",
+      "email": "pburckhardt@outlook.com"
+    }
+  ],
+  "scripts": {
+    "test": "mocha",
+    "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+    "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+  },
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/figure-io/controls-spec.git"
+  },
+  "keywords": [
+    "figure-io",
+    "figure.io",
+    "dataviz",
+    "visualization",
+    "chart",
+    "graph",
+    "controls",
+    "gui",
+    "interface",
+    "schema",
+    "valid",
+    "validate",
+    "validator",
+    "validation",
+    "template",
+    "specification",
+    "spec"
+  ],
+  "bugs": {
+    "url": "https://github.com/figure-io/controls-spec/issues"
+  },
+  "dependencies": {
+    "is-my-json-valid": "^2.12.1"
+  },
+  "devDependencies": {
+    "chai": "3.x.x",
+    "codecov.io": "^0.1.5",
+    "istanbul": "^0.3.0",
+    "jshint": "2.x.x",
+    "jshint-stylish": "2.x.x",
+    "mocha": "2.x.x"
+  },
+  "license": "MIT"
+}

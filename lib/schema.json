@@ -1,0 +1,107 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Controls",
+    "description": "Schema for control interface configurations.",
+    "definitions":{
+        "slider":{
+            "title": "Slider",
+            "type": "object",
+            "properties": {
+                "type":{
+                    "enum": ["slider"]
+                },
+                "min": {
+                    "type":"number"
+                },
+                "max": {
+                    "type":"number"
+                },
+                "step": {
+                    "type":"number"
+                },
+                "value": {
+                    "type":"number"
+                },
+                "required":["min","max"]
+            }
+        },
+        "checkbox":{
+            "title": "Checkbox",
+            "type": "object",
+            "properties": {
+                "type":{
+                    "enum": ["checkbox"]
+                },
+                "value": {
+                    "type":"boolean"
+                }
+            }
+        },
+        "dropdown":{
+            "title": "Dropdown Menu",
+            "type": "object",
+            "properties": {
+                "type":{
+                    "enum": ["dropdown"]
+                },
+                "choices": {
+                    "type":"array",
+                    "minItems": 2,
+                    "items": { "type": "string" },
+                    "uniqueItems": true
+                },
+                "value": {
+                    "type":["string"]
+                },
+                "required":["choices"]
+            }
+        },
+        "input":{
+            "title": "Input Field",
+            "type": "object",
+            "properties": {
+                "type":{
+                    "enum": ["input"]
+                },
+                "value": {
+                    "type":["string","number"]
+                }
+            }
+        },
+        "colorpicker":{
+            "title": "Color Picker",
+            "type": "object",
+            "properties": {
+                "type":{
+                    "enum": ["colorpicker"]
+                },
+                "value": {
+                    "type":"string",
+                    "pattern":"^#(?:[0-9a-fA-F]{3}){1,2}$"
+                }
+            }
+        }
+    },
+    "oneOf": [
+        { "$ref": "#/definitions/slider" },
+        { "$ref": "#/definitions/checkbox" },
+        { "$ref": "#/definitions/dropdown" },
+        { "$ref": "#/definitions/input" },
+        { "$ref": "#/definitions/colorpicker" }
+    ],
+    "properties": {
+        "id": {
+            "description": "A unique identifier for the control element",
+            "type": ["string","number"]
+        },
+        "name": {
+            "description": "The displayed name for the control element",
+            "type": "string"
+        },
+        "type": {
+            "description": "A string indicating the type of the control element",
+            "enum": ["slider","checkbox","dropdown","input","colorpicker"]
+        }
+    },
+    "required": ["id","type"]
+}
