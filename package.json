@@ -1,6 +1,6 @@
 {
   "name": "controls-spec",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "JSON specification and validation for control interfaces.",
   "author": {
     "name": "Philipp Burckhardt",
