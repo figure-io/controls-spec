@@ -1,5 +1,6 @@
 {
-	"id": "",
-	"type":"colorpicker",
-	"value":"#FF0000"
+    "id": "",
+    "description":"Pick a color...",
+    "type":"colorpicker",
+    "value":"#FF0000"
 }

@@ -98,6 +98,10 @@
             "description": "The displayed name for the control element",
             "type": "string"
         },
+        "description": {
+            "description": "A description for the control element tooltip",
+            "type": "string"
+        },
         "type": {
             "description": "A string indicating the type of the control element",
             "enum": ["slider","checkbox","dropdown","input","colorpicker"]
