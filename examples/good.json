@@ -3,5 +3,6 @@
     "type":"slider",
     "max": 10,
     "min": 0,
+    "value": 5,
     "step":1
 }

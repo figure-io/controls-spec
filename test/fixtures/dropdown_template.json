@@ -1,5 +1,6 @@
 {
 	"id": "",
 	"type":"dropdown",
-	"choices":["one","two"]
+	"choices":["one","two"],
+	"value": "one"
 }

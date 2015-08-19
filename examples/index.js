@@ -28,7 +28,9 @@ badConfig = require( './bad.json' );
 
 // Validate:
 isValid = validate( goodConfig );
-// returns true
+console.log( 'Good configuartion:' );
+console.log( isValid );
 
 isValid = validate( badConfig );
-// returns false
+console.log( 'Bad configuartion:' );
+console.log( isValid );

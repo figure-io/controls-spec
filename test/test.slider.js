@@ -35,14 +35,24 @@ describe( 'configuration slider control', function tests() {
 		template = JSON.parse( tmpl );
 	});
 
+	it( 'should validate control configuration with a valid `value` field', function test() {
+		template.value = 5;
+		assert.ok( validate( template ) );
+	});
+
+	it( 'should validate control configuration without the optional `step` field', function test() {
+		delete template.step;
+		assert.ok( validate( template ) );
+	});
+
 	it( 'should invalidate a control configuration without a `min` field', function test() {
-		template.min = undefined;
+		delete template.min;
 		assert.notOk( validate( template ) );
 		assert.strictEqual( validate.errors.length, 1 );
 	});
 
 	it( 'should invalidate a control configuration without a `max` field', function test() {
-		template.max = undefined;
+		delete template.max;
 		assert.notOk( validate( template ) );
 		assert.strictEqual( validate.errors.length, 1 );
 	});
@@ -117,6 +127,29 @@ describe( 'configuration slider control', function tests() {
 			assert.notOk( validate( template ) );
 			assert.strictEqual( validate.errors.length, 1 );
 		}
+	});
+
+	it( 'should invalidate a control configuration with a `value` field outside the interval [min,max]', function test() {
+		template.min = 0;
+		template.max = 1;
+		template.value = 1.5;
+		assert.notOk( validate( template ) );
+		assert.strictEqual( validate.errors.length, 1 );
+	});
+
+	it( 'should invalidate a control configuration with a `step` field larger than `max - min`', function test() {
+		template.min = -5;
+		template.max = 5;
+		template.step = 11;
+		assert.notOk( validate( template ) );
+		assert.strictEqual( validate.errors.length, 1 );
+	});
+
+	it( 'should invalidate a control configuration with a `min` field larger than or equal to `max`', function test() {
+		template.min = 7;
+		template.max = 5;
+		assert.notOk( validate( template ) );
+		assert.strictEqual( validate.errors.length, 2	 );
 	});
 
 });

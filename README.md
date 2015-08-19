@@ -43,7 +43,7 @@ var isValid = validate( config );
 An `array` of errors from the most recent validation. If no errors occurred during validation, the list is `null`.
 
 ``` javascript
-var errs = validator.errors;
+var errs = validate.errors;
 ```
 
 ## Examples

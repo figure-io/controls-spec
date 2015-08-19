@@ -35,6 +35,11 @@ describe( 'configuration dropdown control', function tests() {
 		template = JSON.parse( tmpl );
 	});
 
+	it( 'should validate a control configuration without the optional `value` field', function test() {
+		delete template.value;
+		assert.ok( validate( template ) );
+	});
+
 	it( 'should invalidate a control configuration with an invalid `choices` array (duplicate items)', function test() {
 		template.choices.push( 'one' );
 		assert.notOk( validate( template ) );
@@ -48,7 +53,13 @@ describe( 'configuration dropdown control', function tests() {
 	});
 
 	it( 'should invalidate a control configuration without a `choices` array', function test() {
-		template.choices = undefined;
+		delete template.choices;
+		assert.notOk( validate( template ) );
+		assert.strictEqual( validate.errors.length, 1 );
+	});
+
+	it( 'should invalidate a control configuration for which its `value` is not an element of `choices`', function test() {
+		template.value = 'three';
 		assert.notOk( validate( template ) );
 		assert.strictEqual( validate.errors.length, 1 );
 	});
