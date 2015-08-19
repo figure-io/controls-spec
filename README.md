@@ -129,8 +129,8 @@ $ make view-cov
 Copyright &copy; 2015. The [Compute.io](https://github.com/compute-io) Authors.
 
 
-[npm-image]: http://img.shields.io/npm/v/.svg
-[npm-url]: https://npmjs.org/package/
+[npm-image]: http://img.shields.io/npm/v/controls-spec.svg
+[npm-url]: https://npmjs.org/package/controls-spec
 
 [travis-image]: http://img.shields.io/travis/figure-io/controls-spec/master.svg
 [travis-url]: https://travis-ci.org/figure-io/controls-spec
