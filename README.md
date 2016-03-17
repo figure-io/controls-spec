@@ -49,10 +49,10 @@ var errs = validate.errors;
 ## Examples
 
 ``` javascript
-var validate = require( 'controls-spec' ),
-	goodConfig,
-	badConfig,
-	isValid;
+var validate = require( 'controls-spec' );
+var goodConfig;
+var badConfig;
+var isValid;
 
 // Load in our contol interface configurations...
 goodConfig = require( './good.json' );
@@ -126,7 +126,7 @@ $ make view-cov
 
 ## Copyright
 
-Copyright &copy; 2015. The [Compute.io](https://github.com/compute-io) Authors.
+Copyright &copy; 2015-2016. The [Compute.io](https://github.com/compute-io) Authors.
 
 
 [npm-image]: http://img.shields.io/npm/v/controls-spec.svg
