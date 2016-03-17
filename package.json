@@ -45,7 +45,7 @@
     "url": "https://github.com/figure-io/controls-spec/issues"
   },
   "dependencies": {
-    "is-my-json-valid": "^2.12.1"
+    "is-my-json-valid": "^2.13.1"
   },
   "devDependencies": {
     "chai": "3.x.x",
